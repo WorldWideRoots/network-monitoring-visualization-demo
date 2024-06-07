@@ -1,0 +1,12 @@
+groups:
+- name: flight_data_alerts
+  rules:
+  - alert: HighFlightCount
+    expr: increase(flight_data_count[1m]) > 100
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High number of flights detected"
+      description: "More than 100 flights detected in the last minute."
+ 
