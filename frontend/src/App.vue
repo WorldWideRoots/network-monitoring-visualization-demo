@@ -1,21 +1,27 @@
 <template>
   <div id="app">
-    <header>
-      <h1>Real-Time Flight Data Visualization</h1>
-    </header>
-    <FlightData />
+    <GrafanaDashboard />
   </div>
 </template>
 
 <script>
-import FlightData from './components/FlightData.vue';
+import GrafanaDashboard from './components/GrafanaDashboard.vue';
 
 export default {
   name: 'App',
   components: {
-    FlightData
+    GrafanaDashboard
   }
 };
 </script>
 
-  
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
